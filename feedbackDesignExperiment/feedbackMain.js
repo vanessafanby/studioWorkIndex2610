@@ -33,5 +33,5 @@ function endNote() {
   document.body.style.backgroundColor = "white";
 }
 
-playButton.addEventListener("mouse-down", startNote);
-playButton.addEventListener("mouse-up", endNote);
+playButton.addEventListener("mousedown", startNote);
+playButton.addEventListener("mouseup", endNote);
