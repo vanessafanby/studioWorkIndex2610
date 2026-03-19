@@ -1,26 +1,22 @@
-/*import font*/
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap");
 
-/*define custom variables*/
 :root {
-  /* Late Night Bath Palette by sukinapan https://lospec.com/palette-list/late-night-bath */
-  --col01: #282d3c;
-  --col02: #f0f6f0;
-  --col03: #ffc4b8;
-  --col04: #5b5d70;
-  --col05: #74838c;
-  --col06: #f69197;
-  --border: solid 2px var(--col04);
+  --bg: #b4d3d9;
+  --text: #000000;
+  --piano-white: #f2eae0;
+  --piano-black: #000000;
+  --active-white: #d9b8a7;
+  --active-black: #555555;
+  --border: solid 2px #000000;
 }
 
 body {
-  font-family: "Work Sans", serif;
-  background-color: var(--col01);
-  color: var(--col02);
+  font-family: "Dosis", sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
   display: flex;
   flex-direction: column;
-  /*align-items: center;*/
-  gap: 2rem;
+  min-height: 100vh;
   max-width: 1280px;
   padding: 0 3rem;
   margin: 0 auto;
@@ -32,22 +28,88 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
-  padding-top: 1rem;
+  gap: 3rem;
+  padding-top: 2rem;
 }
 
-/*intro modal dialog*/
-dialog[open] {
-  margin: auto;
-  padding: 1rem;
+h1 {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.contentRow {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 4rem;
+}
+
+.controlsPanel {
+  width: 320px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .sliderContainer {
   display: flex;
   flex-direction: column;
+  gap: 0.5rem;
+}
+
+.iconContainer {
+  display: flex;
   align-items: center;
+  gap: 0.75rem;
+}
+
+.iconContainer input[type="range"] {
+  flex: 1;
+}
+
+label,
+p,
+span,
+button,
+h1 {
+  color: var(--text);
+}
+
+/* intro modal dialog */
+dialog[open] {
+  margin: auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  border: var(--border);
+  background-color: #ffffff;
+  color: var(--text);
+}
+
+#dialog-close-button {
+  font-family: "Dosis", sans-serif;
+  border: var(--border);
+  background-color: var(--piano-white);
+  color: var(--text);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+/* optional: mobile layout */
+@media (max-width: 900px) {
+  .contentRow {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .controlsPanel {
+    width: 100%;
+    max-width: 500px;
+  }
 }
