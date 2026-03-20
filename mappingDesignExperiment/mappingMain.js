@@ -1,9 +1,12 @@
 // find our elements
 const stageContainer = document.getElementById("stage-container");
 const circleButton = document.getElementById("circle-button");
-const changeRed = document.getElementById("change-red");
-const changeCornflower = document.getElementById("change-cornflower");
-const changeGreenYellow = document.getElementById("change-greenyellow");
+const changeAqua = document.getElementById("change-aqua");
+const changeBlue = document.getElementById("change-blue");
+const changePink = document.getElementById("change-pink");
+
+// find slider
+const colourSlider = document.getElementById("colour-slider");
 
 // find stage width
 let stageContainerWidth = stageContainer.offsetWidth;
@@ -13,8 +16,9 @@ let stageContainerWidth = stageContainer.offsetWidth;
 // find stage height
 let stageContainerHeight = stageContainer.offsetHeight;
 // console.log(stageContainerHeight);
+
 // set default circle colour
-let circleColour = "red";
+let circleColour = "#44A194";
 
 // create the konva stage
 const stage = new Konva.Stage({
@@ -55,6 +59,25 @@ function changeColourRadio(clickEvent) {
 }
 
 // add eventListeners
-changeRed.addEventListener("click", changeColourRadio);
-changeCornflower.addEventListener("click", changeColourRadio);
-changeGreenYellow.addEventListener("click", changeColourRadio);
+changeAqua.addEventListener("click", changeColourRadio);
+changeBlue.addEventListener("click", changeColourRadio);
+changePink.addEventListener("click", changeColourRadio);
+
+// NEW FUNCTION (mapping exercise)
+// this function takes the slider value (0–360) and maps it to a colour
+// I used HSL because the hue value directly corresponds to colours on a colour wheel
+// this makes the interaction intuitive, as sliding changes colour smoothly
+
+function updateColourFromSlider(event) {
+  // get slider value
+  let hueValue = event.target.value;
+
+  // map number to HSL colour
+  let newColour = `hsl(${hueValue}, 60%, 60%)`;
+
+  // set circle colour
+  circleColour = newColour;
+}
+
+// add event listener for slider
+colourSlider.addEventListener("input", updateColourFromSlider);

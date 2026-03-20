@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>changeMe!!!!!</title>
+    <title>Mapping Design Experiment</title>
 
     <script src="https://unpkg.com/konva@10/konva.min.js"></script>
     <link rel="stylesheet" href="mappingStyle.css" />
@@ -12,41 +12,39 @@
   <body>
     <main>
       <div class="toolBar">
-        <button id="circle-button">draw a new circle</button>
         <fieldset>
           <legend>Pick a new colour:</legend>
 
           <div>
             <input
               type="radio"
-              id="change-red"
+              id="change-aqua"
               name="drone"
-              value="huey"
+              value="#44A194"
               checked
             />
-            <label for="change-red">Red</label>
+            <label for="change-aqua">Aqua</label>
           </div>
 
           <div>
-            <input
-              type="radio"
-              id="change-cornflower"
-              name="drone"
-              value="cornflowerblue"
-            />
-            <label for="change-cornflower">Cornflower</label>
+            <input type="radio" id="change-blue" name="drone" value="#537D96" />
+            <label for="change-blue">Blue</label>
           </div>
 
           <div>
-            <input
-              type="radio"
-              id="change-greenyellow"
-              name="drone"
-              value="greenyellow"
-            />
-            <label for="change-greenyellow">GreenYellow</label>
+            <input type="radio" id="change-pink" name="drone" value="#EC8F8D" />
+            <label for="change-pink">Pink</label>
           </div>
         </fieldset>
+
+        <div>
+          <label for="colour-slider">Adjust colour:</label>
+          <input type="range" id="colour-slider" min="0" max="360" value="0" />
+        </div>
+
+        <!-- Here, I chose to include a range input for colour adjustment, this is because I wanted to introduce a more continuous type of mapping. Unlike radio buttons, the slider allows gradual change, that can be translated into a visual outcome. -->
+
+        <button id="circle-button">draw a new circle</button>
       </div>
 
       <div class="stageContainer" id="stage-container">
@@ -55,3 +53,4 @@
     </main>
   </body>
 </html>
+<!-- In the future, I will use this mapping technique to adjust the brush tool, brush sizes on the webpage, also using it to adjust the sound of different music played. Furtheremore, I can also use this tool to insert different shapes and colours, according to the users choices.-->

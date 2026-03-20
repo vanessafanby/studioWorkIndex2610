@@ -44,6 +44,7 @@
 .blackKey {
   margin: 0;
   background-color: #bda6ce;
+  /* Here, I have used a purple colour from the colourhunt palette. I wanted to make each colour different so it wont look confusing for beginning users to play.  */
   border: var(--border);
   border-left: none;
   border-radius: 0 0 0.25rem 0.25rem;
@@ -70,7 +71,9 @@
 .whiteKey.activeKey {
   background-color: #d9c8bb;
 }
+/* Origially, this white keyboard colour was the same with the black keyboards, I decided to change each of these colour to make it look easier and obvious for new beginenrs.  */
 
 .blackKey.activeKey {
   background-color: #555555;
 }
+/* Furthermore, I chose to keep borders visible around the keys and controls so users can easily recognise what can be pressed. This allows the interactive areas more obvious. */

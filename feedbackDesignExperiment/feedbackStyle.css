@@ -1,12 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap");
-
 body {
   font-family: "Dosis", sans-serif;
+  /* Here, I have used the smae font family as my main index.html and other in-class experiments. This is to make them match with each other, and not to feel weird. */
   background-color: #fff2d0;
   color: #000000;
   margin: 0;
   min-height: 100vh;
 }
+/* This is my colour palette reference here: Colorhunt.co. (2026). Color Palette: #FFFBF1 #FFF2D0 #FFB2B2 #E36A6A - Color Hunt. [online] Available at: https://colorhunt.co/palette/fffbf1fff2d0ffb2b2e36a6a [Accessed 20 Mar. 2026].
+
+‌ */
 
 main {
   min-height: 100vh;
@@ -33,7 +35,8 @@ h1 {
   font-size: 1.2rem;
   transition: 2000ms;
 }
-
+/* I chose to make the starting background colour light and warm, to make the user feel calm before interaction begins. 
+I have then decided to make the border of the button red-pink to create a stronger contrast when the background changes, making the feedback more noticeable. */
 #play-button:hover {
   cursor: pointer;
 }
@@ -59,3 +62,5 @@ dialog[open] {
   padding: 0.6rem 1.2rem;
   cursor: pointer;
 }
+
+/* I chose to add a strong border around the button so it is clearly identifiable as the main interactive object. In this case, users would know where to click too.*/

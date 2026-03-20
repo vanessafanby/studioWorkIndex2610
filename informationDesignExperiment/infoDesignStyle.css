@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap");
-
 :root {
   --bg: #b4d3d9;
   --text: #000000;
@@ -9,9 +7,15 @@
   --active-black: #555555;
   --border: solid 2px #000000;
 }
+/* I chose to keep the background soft and light since I wanted the interactive elements to stand out clearly without making the page feel visually heavy.  */
 
+/* The colour palettle I have used here is from Colourhunt, I have aimed to use a clean colours to corresspond to my future assignment thoughts. Which is to also use calm and chilling colours instead of vibrant ones.  */
+/* This is the reference to the colour palette website: Colorhunt.co. (2026). Color Palette: #F2EAE0 #B4D3D9 #BDA6CE #9B8EC7 - Color Hunt. [online] Available at: https://colorhunt.co/palette/f2eae0b4d3d9bda6ce9b8ec7 [Accessed 20 Mar. 2026].
+
+‌ */
 body {
   font-family: "Dosis", sans-serif;
+  /* Here, I have used the same font family as my main index.html, this is to make the overall look corresspond, and match, to have a nice feeling overall  */
   background-color: var(--bg);
   color: var(--text);
   display: flex;
@@ -79,7 +83,6 @@ h1 {
   color: var(--text);
 }
 
-/* intro modal dialog */
 dialog[open] {
   margin: auto;
   padding: 1rem 1.5rem;
@@ -99,17 +102,4 @@ dialog[open] {
   color: var(--text);
   padding: 0.5rem 1rem;
   cursor: pointer;
-}
-
-/* optional: mobile layout */
-@media (max-width: 900px) {
-  .contentRow {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .controlsPanel {
-    width: 100%;
-    max-width: 500px;
-  }
 }

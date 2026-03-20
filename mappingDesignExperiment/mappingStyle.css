@@ -1,7 +1,40 @@
+body {
+  font-family: "Dosis", sans-serif;
+  margin: 0;
+  color: black;
+}
+/* Here again, I haved used the same font as my main index.html and the previous in-class experiments, this is to ensure the whole experience is calming and relaxing(which is my main aim for my project as well, I would be using the same font throughout the experience)without any other typography to feel rigid or overly formal. */
+
 main {
   display: flex;
   flex-direction: column;
   height: 100vh;
+}
+
+.toolBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  gap: 2rem;
+}
+
+#circle-button {
+  font-family: "Dosis", sans-serif;
+  border: 3px solid #537d96;
+  background-color: white;
+  color: black;
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+}
+/* This is the colour palette reference I have used here: Colorhunt.co. (2026). Color Palette: #F4F0E4 #44A194 #537D96 #EC8F8D - Color Hunt. [online] Available at: https://colorhunt.co/palette/f4f0e444a194537d96ec8f8d [Accessed 20 Mar. 2026].
+
+‌ */
+/* These colour: aqua, blue, and pink tones work together harmoniously, making the interface feel intentional. */
+
+fieldset {
+  border: 2px solid #537d96;
+  padding: 1rem;
 }
 
 .stageContainer {
